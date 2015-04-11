@@ -1,0 +1,297 @@
+body {
+    xpadding-top: 70px;
+}
+
+
+@media (min-width: 0px) {
+    #map .navbar-header {
+        float: none;
+    }
+    #map .navbar-left, #map .navbar-right {
+        float: none !important;
+    }
+    #map .navbar-toggle {
+        display: block;
+    }
+    #map .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    #map .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    #map .navbar-collapse.collapse {
+        display: none!important;
+    }
+    #map .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	#map .navbar-nav>li {
+        float: none;
+    }
+    #map .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #map .collapse.in{
+  		display:block !important;
+	}
+}
+
+.logo-text {
+    font-family: text1;
+    font-size: 35px;
+    font-weight: bolder;
+	color: white;
+	text-decoration: none;
+    xcolor: rgba(255, 255, 255, 0.81);
+    margin-left: 28px;
+}
+
+.navbar .container .text-left a:hover {
+    text-decoration: none;   
+}
+
+@font-face {
+    font-family: text1;
+    src: url(../fonts/ocr_std.ttf);
+}
+
+.hero {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+#hero-1 {
+	background: url("../img/background2_2.png") no-repeat center center fixed;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.navbar-logo {
+	float: left;
+	line-height: 70px;
+	padding-left: 70px;
+    padding-top: 10px;
+    margin-left:00px;
+}
+
+.logo-text:before {
+	content: "";
+	background-image: url("../img/logo1.png");/*Kevin Zhan of the Class of 2016 made this image*/
+    background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	background-size: 60px 60px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 15px;
+    margin-left: 20px;
+}
+.nav1 {
+    background-color: rgba(0, 0, 0, 0.19);
+    border: none;
+}
+
+#hero-1 .nav1 .navbar-toggle {
+    background-color: rgba(227, 31, 31, 0.44);   
+}
+
+#hero-1 .nav1 .navbar-toggle:hover {
+    xbackground-color: #279182;   
+}
+
+#hero-1 .navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+@media only screen
+and (max-width: 768px) {
+    #hero-1 .nav1 .container-fluid .navbar-collapse.in {
+        background-color: rgba(0,0,0,.19);
+    }
+    #hero-1 .nav1 {
+        background-color: transparent;
+    }
+    #hero-1 .container .row .white-grey .intro {
+        font-size: 30px;
+    }
+}
+
+
+.light {
+	opacity: 1;
+}
+
+.white-grey {
+	color: rgb(255, 241, 241);
+}
+
+.intro {
+    color: white; 
+}
+
+.sub-intro {
+    font-family: text2; 
+    font-weight: bolder;
+    font-size: 15.5px;
+    color: rgba(255, 255, 255, 0.81);
+}
+
+@font-face {
+    font-family: text2;
+    src: url(../fonts/quicksand_regular.otf)
+}
+
+.rounded-button {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	font-family: "text2",sans-serif;
+	font-weight: bold;
+	padding: 2px 10px 3px;
+	border: 0;
+	cursor: pointer;
+	xheight: 38px;
+	display: inline-block;
+	text-align: center;
+	xtext-decoration: none;
+	line-height: 38px;
+    margin-top: 20px;
+}
+
+.rounded-button[disabled] {
+	opacity: 0.8;
+	pointer-events: none;
+}
+
+.rounded-button.l-padding {
+	padding: 0 30px 0 30px;
+}
+
+.main-button {
+	background: #dd5c5c;
+	-webkit-box-shadow: #9a4040 0 2px 0;
+	box-shadow: #9a4040 0 2px 0;
+	color: white;
+    width: 220px;
+    margin-top: 17px;
+	margin-bottom: 25px;
+}
+
+.main-button:hover {
+	background: #e06c6c;
+	color: white;
+}
+
+.hero-bottom a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.hero-bottom p,.hero-bottom a {
+	padding-right: 20px;
+	display: inline-block;
+}
+
+.out-maps {
+    font-family: text2;
+    font-weight: bolder;
+    font-size: 16.5px;
+    xcolor: rgba(255, 255, 255, 0.81);
+    color: white;
+    margin-top: 5px;
+}
+
+.sub-button {
+    font-family: text2;
+    font-size: 10px;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+.nav1-list-item {
+    margin-right: 5px;
+}
+
+.nav1-4link {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav1-main-link {
+    font-size: 30px;
+}
+
+.nav1-4link-whole {
+    margin-top: 25px;
+    xmargin-left: 500px;
+}
+
+.nav1-4link-whole li {
+    display: inline-block;
+}
+
+
+
+.nav1-brand {
+    margin-bottom: 30px;
+}
+
+#hero-1 .nav1 .container-fluid .navbar-header .navbar-toggle {
+    margin-top: 32px;
+}
+
+.sub-buttons {
+    margin-top: 20px;
+    xmargin-right: 5px;
+}
+
+#map_button {
+    margin-top: 20px; 
+}
+
+#map {
+    background-color: rgb(220, 108, 110);
+}
+
+@media (min-width: 768px) {
+  #nav1-btn {
+    display: block;
+  }
+
+  #map .navbar .container-fluid .collapse {
+    display: none !important;
+  }
+}
+#map .navbar-collapse li {
+    display: block;
+}
+
+#map .navbar {
+    background-color: transparent;
+    border: none;
+}
+
+#map .navbar-toggle {
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+#map .navbar a {
+    color: white;
+}
+
+#map .navbar a:hover {
+    color: #9c9c9c;    
+}
+
+#map .navbar-brand {
+    font-size: 30px;
+}
