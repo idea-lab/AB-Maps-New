@@ -84,18 +84,33 @@
                     </ul>
                 </div>
             </nav>
-
-            <form class="form-inline">
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputEmail3">From Location</label>
-                    <input type="text" class="form-control" id="exampleInputEmail3" placeholder="From: (ex. 232 East)">
+            <div id="map_2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="directions col-sm-2">
+                        <h1 class="text-center">Directions</h1>
+                    </div>
+                    <div class="col-sm-10">
+            
+                <div class="row">
+                <div class="form-group col-sm-5">
+                    <label class="sr-only">From Location Input</label>
+                    <input type="text" class="form-control" placeholder="From: (ex. 232 East)">
                 </div>
-                <div class="form-group">
-                    <label class="sr-only" for="exampleInputPassword3">To Location</label>
-                    <input type="text" class="form-control" id="exampleInputPassword3" placeholder="To: (ex. 232 West)">
+                <div class="form-group col-sm-5 xcol-sm-offset-4 xcol-sm-offset-1">
+                    <label class="sr-only">To Location Input</label>
+                    <input type="text" class="form-control"placeholder="To: (ex. 232 West)">
                 </div>
-                <button type="submit" class="btn btn-default">Navigate!</button>
-            </form>
+                    <div class="col-sm-2">
+                <button type="button" class="btn btn-default col-sm-2 col-sm-offset-4" data-target="#ex_map">Go!</button>
+                        </div>
+                </div>
+           
+                    <img class="img-responsive col-sm-12" id="ex_map" alt="Map Placeholder" src="img/ex_map2.jpg" xwidth="1170" xheight="463">
+                        </div>
+                </div>
+                </div>
+                </div>
         </div><!--end #map div-->
     </body> 
 </html>

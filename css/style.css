@@ -295,3 +295,29 @@ and (max-width: 768px) {
 #map .navbar-brand {
     font-size: 30px;
 }
+
+#from-to {
+}
+
+#map_2 {
+    xbackground-image: url(../img/ex_map1.jpg);
+    xbackground-size: contain;
+}
+
+
+
+#ex_map {
+    xwidth: 20px;
+    xheight: 80px;
+    background: url(../img/ex_map1.jpg);
+    background-size: cover;
+}
+
+.directions {
+    border:solid 15px #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: white;
+    padding-bottom: 535px;
+}
