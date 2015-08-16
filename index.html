@@ -1,116 +1,304 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="img/logo1_1.ico"/>
-        <title>Maps</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/lightbox.min.js"></script>
-        <link href="js_css/lightbox.css" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/myscript.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://apis.google.com/js/client:platform.js" async defer></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script src="js/myscript.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="css/animate.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-    </head>
-    <body>
-        <header class="hero" id="hero-1" style="height:685px">
-            <nav class="navbar navbar-default nav1" role="navigation">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
-                            <span class="sr-only">Toggle Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>                        
-                        </button>
-                        <a class="navbar-brand navbar-logo nav1-brand" href="#"><span class="logo-text">Maps</span></a>
-                    </div><!--end .navbar-header for #hero-1-->
-                    <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav nav1-4link-whole navbar-right">
-                            <li><a href="#"><span class="nav1-4link">Home</span></a></li>
-                            <li><a href="#"><span class="nav1-4link">Map</span></a></li>
-                            <li><a href="#"><span class="nav1-4link">About Us</span></a></li> 
-                            <li><a href="#"><span class="nav1-4link">Staff</span></a></li> 
-                            
-                        </ul><!--end .navbar-nav for #hero-1-->
-                    </div><!--end .navbar-collapse for #hero-1-->
-                </div><!--end .container-fluid for #hero-1-->
-            </nav><!--end .navbar for #hero-1-->
-            <div class="container">
-                <div class="row text-center">
-                    <div class="white-grey">
-                        <h1 class="text-center intro">Lorem ipsum dolor sit amet, stet brute tibique cu nec, et quo tale democritum. Diam legimus neglegentur per ei.</h1>
-                        <div id="map_button" class="text-center">
-                            <a class="rounded-button main-button center-block btn btn-default btn-danger btn-lg" href="#" role="button">The Map</a>
-                        </div>
-                    </div>
-                    <div class="hero-bottom white-grey text-center row">
-                        <div class="sub-buttons">
-                            <p class="out-maps col-xs-12 col-md-2 col-md-offset-1">Outdoor Maps:</p>
-                            <a class="sub-button col-xs-2 col-xs-push-2 col-md-2 col-md-offset-1 col-md-push-0 btn btn-default btn-success btn-sm" href="http://www.google.com/maps" style="text-decoration: none" role="button">Google <span class="hidden-xs">Maps</span></a>
-                            <a class="sub-button col-xs-2 col-xs-push-3 col-md-2 col-md-offset-1 col-md-push-0 btn btn-default btn-warning btn-sm" href="http://www.bing.com/maps/" style="text-decoration: none" role="button">Bing <span class="hidden-xs">Maps</span></a>
-                            <a class="sub-button col-xs-2 col-xs-push-4 col-md-2 col-md-offset-1 col-md-push-0 btn btn-default btn-primary btn-sm" href="http://roadtrippers.com/" style="text-decoration: none" role="button"><span class="hidden-xs">Road Trippers</span><span class="hidden-sm hidden-md hidden-lg">RDTP</span></a>
-                        </div><!--end .sub-buttons for #hero-1-->
-                    </div><!--end outdoor maps/bottom row-->
-                </div><!--end info row-->
-            </div><!--end second container w/ info and outdoor maps-->
-        </header><!--end hero-1 header-->
-        <div id="map">
-            <nav class="navbar navbar-inverse">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#map">The Map</a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico"/><!--This icon was converted from a logo created by Kevin Zhan of the Class of 2016 at ABRHS-->
+    <title>Maps</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Abel&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/myscript.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="hero" id="hero-1" style="height:685px">
+        <nav class="navbar navbar-default nav1" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header" id="nav1-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" onClick="navbtnFunction()">
+                        <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <a class="navbar-brand navbar-logo nav1-brand" href="#"><span class="logo-text">Maps</span></a>
                 </div>
-                <div class="navbar-collapse collapse" id="myNavbar2">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Map</a></li>
-                        <li><a href="#">About Us</a></li> 
-                        <li><a href="#">Staff</a></li> 
-                    </ul>
+                <!--end .navbar-header for #hero-1-->
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav nav1-4link-whole navbar-right">
+                        <li><a href="#hero-1" class="smoothScroll"><span class="nav1-4link">Home</span></a></li>
+                        <li><a href="#map" class="smoothScroll"><span class="nav1-4link">Map</span></a></li>
+                        <li><a href="#abt-us" class="smoothScroll"><span class="nav1-4link">About Us</span></a></li>
+                        <li><a href="#staff" class="smoothScroll"><span class="nav1-4link">Staff</span></a></li>
+                    </ul><!--end .navbar-nav for #hero-1-->
+                </div><!--end .navbar-collapse for #hero-1-->
+            </div><!--end .container-fluid for #hero-1-->
+        </nav><!--end .navbar for #hero-1-->
+        <div class="container">
+            <div class="text-center">
+                <div class="white-grey">
+                    <h1 class="text-center intro animated fadeIn">The best desktop and mobile indoor map out there for navigating any registered building.</h1>
+                    <div id="map_button" onClick="btnfc()" class="text-center">
+                        <a class="rounded-button main-button center-block btn btn-default btn-danger btn-lg smoothScroll" id="main-btn" href="#map" role="button">The Map</a>
+                    </div>
                 </div>
-            </nav>
-            <div id="map_2">
+                <div class="hero-bottom white-grey text-center">
+                    <div class="sub-buttons">
+                        <div class="row">
+                            <h4 class="col-xs-12 xcol-md-2 xcol-md-offset-1 smoothScroll">Outdoor Maps:</h4>
+                            <div class="otd-maps col-xs-10 col-xs-offset-1 col-md-9 col-md-offset-3" style="margin-top: 2.25%;">
+                                <div class="row">
+                                    <a class="sub-button col-xs-2 col-xs-offset-2 col-md-2 col-md-offset-0 col-md-push-0 btn btn-default btn-success btn-sm" href="http://www.google.com/maps" style="text-decoration: none" role="button">Google <span class="hidden-xs">Maps</span></a>
+                                    <a class="sub-button col-xs-2 col-xs-offset-1 col-md-2 col-md-offset-1 col-md-push-0 btn btn-default btn-warning btn-sm" href="http://www.bing.com/maps/" style="text-decoration: none" role="button">Bing <span class="hidden-xs">Maps</span></a>
+                                    <a class="sub-button col-xs-2 col-xs-offset-1 col-md-2 col-md-offset-1 col-md-push-0 btn btn-default btn-primary btn-sm" href="http://roadtrippers.com/" style="text-decoration: none" role="button"><span class="hidden-xs">Roadtrippers</span><span class="hidden-sm hidden-md hidden-lg">RDTP</span></a></div>
+                            </div>
+                        </div>
+                    </div><!--end .sub-buttons for #hero-1-->
+                </div><!--end outdoor maps/bottom row-->
+            </div><!--end info row-->
+        </div><!--end second container w/ info and outdoor maps-->
+    </header><!--end hero-1 header-->
+    <div id="map">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#map">The Map</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar2">
+                <ul class="nav navbar-nav">
+                    <li><a class="smoothScroll" href="#hero-1">Home</a></li>
+                    <li><a class="smoothScroll" href="#map">Map</a></li>
+                    <li><a class="smoothScroll" href="#abt-us">About Us</a></li>
+                    <li><a class="smoothScroll" href="#staff">Staff</a></li>
+                </ul>
+            </div>
+        </nav><!--end #map .navbar-toggle-->
+        <div id="map_2">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="directions col-sm-2">
-                        <h1 class="text-center">Directions</h1>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-9">
+                                <div class="row">
+                                    <div class="col-xs-2 col-md-12">
+                                        <div class="row">
+                                            <div class="form-group col-xs-12 xcol-sm-offset-10 col-md-2 col-md-offset-0">
+                                                <p class="big-small-p">From:</p>
+                                                <label class="sr-only">From Location Input</label>
+                                                <input type="text" class="form-control hidden-xs hidden-sm" placeholder="232 East">
+                                                <input type="text" class="form-control hidden-md hidden-lg" placeholder="232E">
+                                            </div>
+                                            <div class="form-group col-xs-12 col-md-2">
+                                                <p class="big-small-p">To:</p>
+                                                <label class="sr-only">To Location Input</label>
+                                                <input type="text" class="form-control hidden-xs hidden-sm" placeholder="232 West">
+                                                <input type="text" class="form-control hidden-md hidden-lg" placeholder="232W">
+                                            </div>
+                                            <div class="col-xs-12 col-md-8 btn-go-div">
+                                                <button type="button" class="btn btn-default btn-go xhidden-xs xhidden-sm" data-target="#ex_map" onClick="drcFunction()">Go!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10 xcol-xs-offset-1 col-md-12 col-md-offset-0">
+                                        <img class="img-responsive xhidden-xs xhidden-sm" id="ex_map" alt="Map Placeholder" src="img/ex_map2.jpg" xwidth="1170" xheight="463">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="directions col-xs-12 col-md-2">
+                                <h2 class="xtext-center">Directions:</h2>
+                                <div id="directions-list" class="animated fadeIn">
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3>1. Take a right out of room 232.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3> 2. Take a left at the end of the hallway.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3> 3. Go down staircase S52 in about 7 feet.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3> 4. Take a right at the end of the staircase.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3>  5. Head straight for about 10 feet.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3>6. Take a left at the hallway.</h3>
+                                    </div>
+                                    <div class="hidden-xs hidden-sm">
+                                        <h3> 7. 232 West should be on the right.</h3>
+                                    </div>
+                                </div>
+                                <div id="directions-txt" class="carousel slide hidden-md hidden-lg animated fadeIn" data-ride="carousel" data-interval="false" style="margin-top: 55px;">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#directions-txt" data-slide-to="0" class="xactive"></li>
+                                        <li data-target="#directions-txt" data-slide-to="1"></li>
+                                        <li data-target="#directions-txt" data-slide-to="2"></li>
+                                        <li data-target="#directions-txt" data-slide-to="3"></li>
+                                        <li data-target="#directions-txt" data-slide-to="4"></li>
+                                        <li data-target="#directions-txt" data-slide-to="5"></li>
+                                        <li data-target="#directions-txt" data-slide-to="6"></li>
+                                    </ol>
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <div class="text-center">
+                                                <h3>1. Take a right out of room 232.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3> 2. Take a left at the end of the hallway.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3> 3. Go down staircase S52 in about 7 feet.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3> 4. Take a right at the end of the staircase.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3>  5. Head straight for about 10 feet.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3>6. Take a left at the hallway.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="text-center">
+                                                <h3> 7. 232 West should be on the right.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#directions-txt" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#directions-txt" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div><!--end #directions-txt .carousel-->
+                            </div><!--end .directions-->
+                        </div><!--end #map_2 row-->
+                    </div><!--end .col-xs-12 for whole section-->
+                </div><!--end #map2 .container-fluid .row-->
+            </div><!--end #map2 .container-fluid-->
+        </div><!-- end #map2-->
+    </div><!--end #map div-->
+    <div id="abt-us">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#abt-us">About Us</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar3">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar3">
+                <ul class="nav navbar-nav">
+                    <li><a class="smoothScroll" href="#hero-1">Home</a></li>
+                    <li><a class="smoothScroll" href="#map">Map</a></li>
+                    <li><a class="smoothScroll" href="#abt-us">About Us</a></li>
+                    <li><a class="smoothScroll" href="#staff">Staff</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h3 class="text-center">We are a team of <a href="http://abrhs.abschools.org" class="abrhs">high school </a>coders with a passion for innovation. AB Maps was inspired from the many times we’ve gotten lost in buildings ranging from our own high school, hospitals, and shopping malls. And now, we’re bringing the solution to you.</h3>
+    </div><!--end #abt-us-->
+    <div id="staff">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#staff">Staff</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar4">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="myNavbar4">
+                <ul class="nav navbar-nav">
+                    <li><a class="smoothScroll" href="#hero-1">Home</a></li>
+                    <li><a class="smoothScroll" href="#map">Map</a></li>
+                    <li><a class="smoothScroll" href="#abt-us">About Us</a></li>
+                    <li><a class="smoothScroll" href="#staff">Staff</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="staff-imgs" class="col-xs-5 col-xs-offset-1 col-md-12 col-md-offset-0 container-fluid">
+                    <div class="row">
+                        <div class="col-xs-11 col-sm-10 col-md-2 col-md-offset-1" id="sky" onClick="skyFunction()">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-12"> <img class="img-circle img-responsive xminimage" src="img/sky_li3.jpg" alt="Sky &quot;Skittles&quot; Li" title="Sky &quot;Skittles&quot; Li"></div>
+                                <div class="col-xs-12">
+                                    <h3 class="text-center">Sky</h3></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-11 col-sm-10 col-md-2 col-md-offset-2" id="clb" onClick="clbFunction()">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-12"><img class="img-circle img-responsive xminimage" src="img/caleb_trotz.jpg" alt="Caleb &quot;Trotzilla&quot; Trotz" title="Caleb &quot;Trotzilla&quot; Trotz"></div>
+                                <div class="col-xs-12">
+                                    <h3 class="text-center">Caleb</h3></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-11 col-sm-10 col-md-2 col-md-offset-2" id="adrs" onClick="adrsFunction()">
+                            <div class="row">
+                                <div class="col-xs-11 col-sm-12"><img class="img-circle img-responsive xminimage" src="img/adarsh_suresh3.jpg" alt="Adarsh Suresh" title="Adarsh Suresh"></div>
+                                <div class="col-xs-11 col-sm-12">
+                                    <h3 class="text-center">Adarsh</h3></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-10">
-            
-                <div class="row">
-                <div class="form-group col-sm-5">
-                    <label class="sr-only">From Location Input</label>
-                    <input type="text" class="form-control" placeholder="From: (ex. 232 East)">
                 </div>
-                <div class="form-group col-sm-5 xcol-sm-offset-4 xcol-sm-offset-1">
-                    <label class="sr-only">To Location Input</label>
-                    <input type="text" class="form-control"placeholder="To: (ex. 232 West)">
-                </div>
-                    <div class="col-sm-2">
-                <button type="button" class="btn btn-default col-sm-2 col-sm-offset-4" data-target="#ex_map">Go!</button>
+                <!--end .staff-imgs-->
+                <div id="bib-txt" class="col-xs-6 col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3" id="intro-txt">
+                            <h4 class="animated fadeIn">This is our dedicated team of programmers and web developers. Click on any of their pictures or names to read their story!</h4>
                         </div>
-                </div>
-           
-                    <img class="img-responsive col-sm-12" id="ex_map" alt="Map Placeholder" src="img/ex_map2.jpg" xwidth="1170" xheight="463">
+                        <!--end .intro-txt-->
+                        <div class="col-md-6 col-md-offset-3" id="sky-txt">
+                            <h4 class="animated fadeIn">The infamous Sky &quot;Skittles&quot; Li started his programming career in the 5th grade; learning Java and JavaScript at <a href="http://www.ktbyte.com" class="ktb">KTbyte</a>. He soon dived into the Computer Science world with great interest, and furthered his knowledge through some self-teaching. His skills now range from coding in HTML/CSS, C, C++, and CoffeeScript; but his true passion and best languages go back to his roots of Java and JavaScript. His hobbies include derping around, hockey, and legending life.</h4>
                         </div>
-                </div>
-                </div>
-                </div>
-        </div><!--end #map div-->
-    </body> 
+                        <!--end .sky-txt-->
+                        <div class="col-md-6 col-md-offset-3" id="clb-txt">
+                            <h4 class="animated fadeIn">When Caleb &quot;Trotzilla&quot; Trotz walks into the room, his subjects bow down in respect. This baller started programming at the mere age of 9 while learning Python from a book. He soon moved on to do far greater things with programming through being a successful student at <a href="http://www.edx.org/course/introduction-computer-science-harvardx-cs50x" class="harcs">Harvard's CS50x course</a>, where he learned C, PHP, and HTML/CSS. Caleb also knows JavaScript from his late night book-reading sessions. Other CS skills of his include Cryptography and Forensics. He also participates in debate and is an avid gamer.</h4>
+                        </div>
+                        <!--end .clb-txt-->
+                        <div class="col-md-6 col-md-offset-3" id="adrs-txt">
+                            <h4 class="animated fadeIn">Adarsh "no nickname b/c he's that cool" Suresh is the main web developer of the team. He initiated his journey at his school's own HTML/CSS course as a freshman in high school, and furthered his skills by learning a little JavaScript and Python. Like his other team members, he does debate as well. With his team, he went to <a href="http://blueprint.hackmit.org/" class="blprt">Blueprint</a>, a Learnathon/Hackathon at MIT, participated in an <a href="http://camsctf.com/" class="cams">online CTF competition</a> hosted by the <a href="http://camscsc.org/" class="cams-host">California Academy of Math and Science Computer Science and Security Club</a>, and will be participating in many more events with Caleb and Sky.</h4>
+                        </div><!--end .adrs-txt-->
+                    </div>
+                </div><!--end #bib-txt-->
+            </div><!--end row of #staff-imgs and #bib-txt columns-->
+        </div><!--end .container-fluid-->
+    </div><!--end #staff-->
+</body>
 </html>
